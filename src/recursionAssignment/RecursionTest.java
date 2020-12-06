@@ -24,6 +24,21 @@ public class RecursionTest{
         assertEquals(3, Recursion.count7(777));
     }
 
+    @Test
+    public void Test4(){
+        assertEquals(3, Recursion.count7(777638492));
+    }
+
+    @Test
+    public void Test5(){
+        assertEquals(2, Recursion.count7(12345677));
+    }
+
+    @Test
+    public void Test6(){
+        assertEquals(3, Recursion.count7(7187371));
+    }
+
     // add more tests
     
 }
