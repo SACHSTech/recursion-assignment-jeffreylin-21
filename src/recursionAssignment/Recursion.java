@@ -32,6 +32,9 @@ public class Recursion{
   } 
 
   public static boolean array220(int[] intNums, int index) {
+    if (intNums.length < 2){
+      return false;
+    }
     return false;
   }
 
