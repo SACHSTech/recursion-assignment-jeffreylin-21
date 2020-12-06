@@ -38,7 +38,7 @@ public class Recursion{
   * Takes in string and replace every occurance of "pi" with 3.14
   *
   * @param String str: The str that we are modifying
-  * @return Str str but with every occurance of "pi" replaced with 3.14
+  * @return String str but with every occurance of "pi" replaced with 3.14
   * @author J. Lin
   */ 
   public static String changePi(String str) {
@@ -58,17 +58,27 @@ public class Recursion{
 
   } 
 
+  /**
+  * Takes in an array and returns a boolean if there is a number followed by a number 10 times larger
+  *
+  * @param int[] intNums: The array we are checking
+  * @return true or false of whether there is a number followed by a number 10 times larger in the array
+  * @author J. Lin
+  */ 
   public static boolean array220(int[] intNums, int index) {
 
-    if (index > intNums.length - 2){
+    // Base case: if the current index is greater than the size of the array - 2, it means it is the last element in the array, so return false
+    if (index > intNums.length - 2) {
       return false;
     }
 
-    if (intNums[index] == intNums[index+1] / 10) {
+    // If the element at the current index is equal to the element in the next index / 10, then return true
+    if (intNums[index] == intNums[index + 1] / 10) {
       return true;
     }
 
-    return array220(intNums, index+1);
+    // Otherwise, recursively check the rest of the indexes by doing a recursive check but increases index by 1
+    return array220(intNums, index + 1);
     
   }
 
