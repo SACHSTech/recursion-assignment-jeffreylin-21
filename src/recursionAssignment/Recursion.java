@@ -34,16 +34,26 @@ public class Recursion{
 
   }
 
-  public static String changePi(String str){
+  /**
+  * Takes in string and replace every occurance of "pi" with 3.14
+  *
+  * @param String str: The str that we are modifying
+  * @return Str str but with every occurance of "pi" replaced with 3.14
+  * @author J. Lin
+  */ 
+  public static String changePi(String str) {
 
-    if(str.length() < 2) {
+    // Base case: if the string is less than 2 characters long, than nothing can be replaced, then return the string
+    if (str.length() < 2) {
       return str;
     }
 
+    // If the first two letters are "pi" then replace them with 3.14 and recursively call the rest of the string from 3.14 onwards
     if (str.substring(0,2).equals("pi")) {
       return "3.14" + changePi(str.substring(2)); 
     }
 
+    // If the letters are not "pi" then recursively call the rest of the string from the second character onwards
     return str.charAt(0) + changePi(str.substring(1));
 
   } 
