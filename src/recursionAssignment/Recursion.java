@@ -21,9 +21,9 @@ public class Recursion{
     if(str.length() < 2) {
       return str;
     }
-    if (str.equals("pi")) {
-      str = "3.14"; 
+    if (str.substring(0,2).equals("pi")) {
+      return ("3.14" + changePi(str.substring(2))); 
     }
-    return str;
+    return str.charAt(0) + changePi(str.substring(1));
   } 
 }
