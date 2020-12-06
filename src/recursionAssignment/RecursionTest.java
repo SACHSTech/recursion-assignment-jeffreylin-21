@@ -72,7 +72,7 @@ public class RecursionTest{
     @Test
     public void Test3_1(){
       int[] intArray = {0};
-      assertTrue(Recursion.array220(intArray, 0));
+      assertFalse(Recursion.array220(intArray, 0));
     }
 
       @Test
