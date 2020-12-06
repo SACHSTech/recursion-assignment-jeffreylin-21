@@ -6,9 +6,6 @@ import recursionAssignment.Recursion;
 
 public class RecursionTest{
     
-    /**
-     * An initial test
-     */
     @Test
     public void Test1_1(){
       assertEquals(0, Recursion.count7(0));

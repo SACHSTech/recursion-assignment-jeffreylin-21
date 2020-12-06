@@ -1,16 +1,33 @@
 package recursionAssignment;
 
+/**
+* ICS4U TDD and Recursion Assignment
+* @author: J. Lin
+*
+*/
+
 public class Recursion{
 
-  public static int count7(int n){
+  /**
+  * Takes in an int and return the number of times 7 appears as a digit
+  *
+  * @param int n: The int that is being checked
+  * @return the number of times 7 appears as a digit
+  * @author J. Lin
+  */  
+  public static int count7(int n) {
     
-    if (n == 0){
+    // Base case, if the number is == 0, then return 0
+    if (n == 0) {
       return 0;
     }
 
+    // If the right most number is 7, return 1 + the number of times 7 appears in the rest of the int using a recursive call
     if (n % 10 == 7) {
       return 1 + count7(n / 10);
     }
+
+    // If the rightmost digit is not 7, then return the number of times 7 appears in the rest of the int using a recursive call
     else {
       return count7(n / 10);
     }
