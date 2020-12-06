@@ -32,13 +32,17 @@ public class Recursion{
   } 
 
   public static boolean array220(int[] intNums, int index) {
+
     if (index > intNums.length - 2){
       return false;
     }
+
     if (intNums[index] == intNums[index+1] / 10) {
       return true;
     }
+
     return array220(intNums, index+1);
+    
   }
 
 }
