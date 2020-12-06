@@ -86,5 +86,23 @@ public class RecursionTest{
       int[] intArray = {1, 2, 3, 4, 5, 6, 60};
       assertTrue(Recursion.array220(intArray, 0));
     }
+
+    @Test
+    public void Test3_4(){
+      int[] intArray = {1, 1, 1, 1, 1, 1};
+      assertFalse(Recursion.array220(intArray, 0));
+    }
+
+    @Test
+    public void Test3_5(){
+      int[] intArray = {1, 5, 2, 6, 1, 10, 54, 20, 20, 1};
+      assertTrue(Recursion.array220(intArray, 0));
+    }
+
+    @Test
+    public void Test3_6(){
+      int[] intArray = {-1, -2, -3, -4, -5, -6, 0};
+      assertFalse(Recursion.array220(intArray, 0));
+    }
     
 }
