@@ -88,40 +88,48 @@ public class RecursionTest{
     assertEquals("25.3.14,89", Recursion.changePi("25.pi,89"));
   }
 
+  // Tests for array220
+
+  // Test when array only contains 0, expects false
   @Test
   public void Test3_1() {
     int[] intArray = { 0 };
     assertFalse(Recursion.array220(intArray, 0));
   }
 
+  // Test when elements in array are 1, 10, expects true
   @Test
   public void Test3_2() {
     int[] intArray = { 1, 10 };
     assertTrue(Recursion.array220(intArray, 0));
   }
 
+  // Test when array is empty, expects false
   @Test
   public void Test3_3() {
-    int[] intArray = { 1, 2, 3, 4, 5, 6, 60 };
-    assertTrue(Recursion.array220(intArray, 0));
+    int[] intArray = { };
+    assertFalse(Recursion.array220(intArray, 0));
   }
 
+  // Test when array is does not fufill conditions, expects false
   @Test
   public void Test3_4() {
     int[] intArray = { 1, 1, 1, 1, 1, 1 };
     assertFalse(Recursion.array220(intArray, 0));
   }
 
+  // Test when array fufills conditions, but has a lot of elements, expects true
   @Test
   public void Test3_5() { 
     int[] intArray = { 1, 5, 2, 6, 1, 10, 54, 20, 20, 1 };
     assertTrue(Recursion.array220(intArray, 0));
   }
 
+  // Test when array fufills conditions, but consists of negative numbers, expects true
   @Test
   public void Test3_6() {
-    int[] intArray = { -1, -2, -3, -4, -5, -6, 0 };
-    assertFalse(Recursion.array220(intArray, 0));
+    int[] intArray = { -1, -2, -3, -30, -5, -6, 0 };
+    assertTrue(Recursion.array220(intArray, 0));
   }
     
 }
