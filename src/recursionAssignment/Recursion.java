@@ -38,7 +38,7 @@ public class Recursion{
     if (intNums[index] == intNums[index+1] / 10) {
       return true;
     }
-    return false;
+    return array220(intNums, index+1);
   }
 
 }
