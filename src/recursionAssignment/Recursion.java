@@ -18,6 +18,9 @@ public class Recursion{
   }
 
   public static String changePi(String str){
+    if(str.length() < 2) {
+      return str;
+    }
     if (str.equals("pi")) {
       str = "3.14"; 
     }
